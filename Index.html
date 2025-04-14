@@ -1,0 +1,53 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Invoice Verification App - Redirecting</title>
+       <script>
+           // Frontend URL - update this each time you restart localtunnel
+           const frontendUrl = "https://your-localtunnel-url.loca.lt";
+           
+           // Redirect to the current frontend URL
+           window.location.href = frontendUrl;
+       </script>
+       <style>
+           body {
+               font-family: Arial, sans-serif;
+               margin: 40px;
+               line-height: 1.6;
+           }
+           .container {
+               max-width: 800px;
+               margin: 0 auto;
+               padding: 20px;
+               border: 1px solid #eee;
+               border-radius: 5px;
+               box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+           }
+           h1 {
+               color: #333;
+           }
+           .redirect-link {
+               display: inline-block;
+               margin-top: 20px;
+               padding: 10px 15px;
+               background-color: #4CAF50;
+               color: white;
+               text-decoration: none;
+               border-radius: 4px;
+           }
+       </style>
+   </head>
+   <body>
+       <div class="container">
+           <h1>Invoice Verification App</h1>
+           <p>You are being redirected to the application...</p>
+           <p>If you are not redirected automatically, <a id="manual-link" href="#" class="redirect-link">click here</a>.</p>
+           
+           <script>
+               document.getElementById('manual-link').href = frontendUrl;
+           </script>
+       </div>
+   </body>
+   </html>
